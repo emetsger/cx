@@ -27,4 +27,4 @@ spec:
                 EU: "EU"
                 US: "US"
         - fromFieldPath: "spec.size"
-          toFieldPath: "spec.forProvider.settings.diskSize"
+          toFieldPath: "spec.forProvider.settings[0].diskSize"
