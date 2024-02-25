@@ -27,8 +27,9 @@ spec:
                     - pattern: '^EU$'
                     - pattern: '^US$'
                 size:
-                  type: integer
-                  exclusiveMinimum: 0
+                  type: number
+                  minimum: 0
+                  exclusiveMinimum: true
               required:
                 - location
                 - size
