@@ -1,7 +1,7 @@
 apiVersion: queue.example.com/v1alpha1
 kind: PubSubClaim
 metadata:
-  name: my-pubsub-queue-claim
+  name: my-pubsub-queue-claim-foo
   namespace: default
 spec:
   location: "US"
