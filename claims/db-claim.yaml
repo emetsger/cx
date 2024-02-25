@@ -1,0 +1,10 @@
+apiVersion: persistence.example.com/v1alpha1
+kind: SqlDbClaim
+metadata:
+  name: my-db-claim
+  namespace: default
+spec:
+  location: "US"
+  size: 5
+  publishConnectionDetailsTo:
+    name: "sql-conn-creds"
