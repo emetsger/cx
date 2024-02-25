@@ -16,8 +16,8 @@ spec:
             location: "US"
             databaseVersion: "POSTGRES_15"
             settings:
-              tier: "db-f1-micro"
-              diskAutoResizeLimit: 10
+              - tier: "db-f1-micro"
+                diskAutoResizeLimit: 10
       patches:
         - fromFieldPath: "spec.location"
           toFieldPath: "spec.forProvider.location"
