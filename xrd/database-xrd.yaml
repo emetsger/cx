@@ -12,6 +12,8 @@ spec:
     plural: sqldbs
   versions:
     - name: v1alpha1
+      served: gtrue
+      referenceable: true
       schema:
         openAPIV3Schema:
           type: object
