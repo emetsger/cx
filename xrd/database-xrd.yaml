@@ -1,0 +1,32 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: sql.persistence.example.com
+spec:
+  group: persistence.example.com
+  claimNames:
+    kind: SqlDbClaim
+    plural: sqldbclaims
+  names:
+    kind: SqlDb
+    plural: sqldbs
+  versions:
+    - name: v1alpha1
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                location:
+                  type: string
+                  oneOf:
+                    - pattern: '^EU$'
+                    - pattern: '^US$'
+                size:
+                  type: integer
+                  exclusiveMinimum: 0
+              required:
+                - location
+                - size
